@@ -2,8 +2,8 @@ kind: pod
 apiVersion: v1
 metadata:
   name: nginx
-  spec:
+spec:
   #one pod can contain multiple containers.
-    containers:
-    - name: nginx   #this image is already exists in dockerhub official.
-      image: nginx  
+  containers:
+  - name: nginx   #this image is already exists in dockerhub official.
+    image: nginx  
