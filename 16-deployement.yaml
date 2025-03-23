@@ -21,13 +21,15 @@ spec:
         app: nginx
         tier: frontend
         purpose: deployment
+  #this is manifest file      
     spec:
       containers:
       - name: nginx
-        image: joindevops/deployment:2.0
+        image: hussainbi/deployment:1.0.0
         ports:
         - containerPort: 80
 ---
+# to run the service on internent we are using load balncer
 kind: Service
 apiVersion: v1
 metadata:
