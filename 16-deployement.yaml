@@ -29,8 +29,7 @@ spec:
         ports:
         - containerPort: 80
 ---
-# to run the service on internent we are using load balncer
-kind: Service
+kind: Service  # to run the service on internent we are using load balncer
 apiVersion: v1
 metadata:
   name: nginx                                                                                                                                            ame: nginx
