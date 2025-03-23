@@ -29,18 +29,18 @@ spec:
         ports:
         - containerPort: 80
 ---
-kind: Service  # to run the service on internent we are using load balncer
+kind: Service  # to run the service on internet we are using LoadBalancer
 apiVersion: v1
 metadata:
-  name: nginx                                                                                                                                            ame: nginx
+  name: nginx  # corrected this line
 spec:
   type: LoadBalancer
-  selector: # labels are used as selectors
+  selector:  # labels are used as selectors
     app: nginx
     tier: frontend
     purpose: deployment
   ports:
   - protocol: TCP
-    port: 80 # service port
+    port: 80  # service port
     targetPort: 80
     nodePort: 30007
